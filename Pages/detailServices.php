@@ -24,6 +24,9 @@
                         <a class="nav-link" href="#">Services proposés</a>
                     </li>
                     <li class="nav-item">
+                        <a class="nav-link" href="#">Demande de Services</a>
+                    </li>
+                    <li class="nav-item">
                         <a class="nav-link" href="#">mes Recherches</a>
                     </li>
                     <li class="nav-item">
@@ -39,26 +42,31 @@
         <br>
         <br>
         <br>
-        <h2><center><strong> Demande de services</strong></center></h2>    
+        <h2><center><strong> Details service proposés</strong></center></h2>    
         <form>
     <center>
         <div class="form-row ">
     <div class="form-group col-md-4">
-        
-      <label for="titreService"></label>
-      
-      <input type="text" class="form-control" id="Service" placeholder="Titre du service">
-      
     <br>
-    <label for="descriptionService"></label>
+    <br>
+    
 
-<textarea id="Description" name="Description du service"
-          rows="4" cols="30">
-Le service .....
-</textarea>
+
+
+
+
+
+
+
+
+
+
+    <a href="./contactService.php" class="btn btn-primary btn-lg " 
+    tabindex="-1" role="button">Contacter</a>
     <br>
     <br>
-  <button type="submit" class="btn btn-primary">Valider la demande de Service</button>
+    <a href="./ajoutDemandeServices.php" class="btn btn-primary btn-lg " 
+    tabindex="-1" role="button">Retour</a>
   </div>
 </div>
 </center>

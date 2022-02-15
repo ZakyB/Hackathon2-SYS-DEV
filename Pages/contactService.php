@@ -41,6 +41,11 @@
         <br>
             <center>
             <input type="submit" value="Envoyer" name="valider"> 
+            
+            <br>
+            <br>
+            <a href="./detailServices.php" class="btn btn-primary btn-lg " 
+    tabindex="-1" role="button">Retour</a>
             </center>
     </form>
 
