@@ -9,7 +9,7 @@
 </head>
 <body>
                      
-    <form class="box" method="POST" action="#">
+    <form class="box" method="POST" action="../PHP/valideConnexion.php">
 
         <h2><strong><em> Authentification</em></strong></h2>
         <br>

@@ -1,7 +1,7 @@
 ﻿<?php
 //connexion a la base de données
 // dsn = Data Source Name = driver MYSQL
-$dsn='mysql:dbname=pwa_ziqmu;host=localhost';
+$dsn='mysql:dbname=hackathon_V2;host=localhost';
 //login
 $login='root';
 // Mot de passe
