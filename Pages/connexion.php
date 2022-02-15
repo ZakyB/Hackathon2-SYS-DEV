@@ -23,7 +23,7 @@
         <br>
         <center><hr id="barre"></center>
             <input type="submit" value="Valider" name="valider">
-        <p>Vous avez pas encore de compte ?<a href="#"> Inscrivez-vous ici !</a></p> 
+        <p>Vous avez pas encore de compte ?<a href="./inscription.php"> Inscrivez-vous ici !</a></p> 
     </form>
 
 </body>
