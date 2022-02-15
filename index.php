@@ -25,15 +25,11 @@
                         <a class="nav-link" href="#">Demande de Services</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Mes Recherches</a>
-                    </li>
-                    <li class="nav-item">
                         <a class="nav-link" style="border-radius:50px" href="./Pages/connexion.php"><button>Se Connecter</button></a>
                     </li>
                 </ul>
                 </div>
             </div>
-
         </nav>
         </header>
 
@@ -70,83 +66,6 @@
                 </div>
             </div>
         </div>
-
-      <!--   <div class="container">
-            <div class="row">
-                <div class="col-md">
-                    <div class="carre">
-                    
-                    <br>
-                    <div class="container_service">
-                        <div class="row">
-                            <div class="col-md-4">
-                                <div class="case_img">
-                                    <img src="./Img/36b1a6da822d3b0d4eaef522260a8431.jpg">
-                                </div>
-                            </div>
-                            <div class="col-md-8">
-                                <div class="row">
-                                    <p>Titre de l'annonce</p>
-                                </div>
-                                <div class="row">
-                                    <p>Prix : </p>
-                                </div>
-                                <br>
-                                <div class="row">
-                                    <p>Description : Le lorem ipsum est, en imprimerie, une suite de mots sans signification utilisée à titre . Généralement, on utilise un texte en faux latin, le Lorem ipsum ou Lipsum.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="container_service">
-                        <div class="row">
-                            <div class="col-md-4">
-                                <div class="case_img">
-                                    <img src="./Img/36b1a6da822d3b0d4eaef522260a8431.jpg">
-                                </div>
-                            </div>
-                            <div class="col-md-8">
-                                <div class="row">
-                                    <p>Titre de l'annonce</p>
-                                </div>
-                                <div class="row">
-                                    <p>Prix : </p>
-                                </div>
-                                <br>
-                                <div class="row">
-                                    <p>Description : Le lorem ipsum est, en imprimerie, une suite de mots sans signification utilisée à titre . Généralement, on utilise un texte en faux latin, le Lorem ipsum ou Lipsum.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="container_service">
-                        <div class="row">
-                            <div class="col-md-4">
-                                <div class="case_img">
-                                    <img src="./Img/36b1a6da822d3b0d4eaef522260a8431.jpg">
-                                </div>
-                            </div>
-                            <div class="col-md-8">
-                                <div class="row">
-                                    <p>Titre de l'annonce</p>
-                                </div>
-                                <div class="row">
-                                    <p>Prix : </p>
-                                </div>
-                                <br>
-                                <div class="row">
-                                    <p>Description : Le lorem ipsum est, en imprimerie, une suite de mots sans signification utilisée à titre . Généralement, on utilise un texte en faux latin, le Lorem ipsum ou Lipsum.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    </div>
-                </div>
-            </div>
-        </div> -->
  
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>

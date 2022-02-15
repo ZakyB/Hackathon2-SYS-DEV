@@ -13,7 +13,7 @@
     <header>
         <nav class="navbar navbar-expand-lg navbar-light fixed-top">
             <div class="container">
-                <a class="navbar-brand" href="./connexion.php"><img src="https://img.icons8.com/doodle/48/000000/garage-closed.png"/></a></a>
+                <a class="navbar-brand" href="../index.php"><img src="https://img.icons8.com/doodle/48/000000/garage-closed.png"/></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
                 </button>
@@ -21,9 +21,6 @@
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
                         <a class="nav-link" href="#">Demande de Services</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Mes Recherches</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" style="border-radius:50px" href="./Pages/connexion.php"><button>Se Connecter</button></a>
