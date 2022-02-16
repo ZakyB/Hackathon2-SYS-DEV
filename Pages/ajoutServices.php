@@ -1,3 +1,4 @@
+<?php session_start();?>
 <!doctype html>
 <html lang="en">
 <head>
@@ -9,78 +10,84 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <a href="https://icons8.com/icon/77vA1n1-oWl1/garage-fermé"></a>
 </head>
-    <body>
-       <!-- Navigation -->
-       <header>
-        <nav class="navbar navbar-expand-lg navbar-light fixed-top">
-            <div class="container">
-                <a class="navbar-brand" href="../index.php"><img src="https://img.icons8.com/doodle/48/000000/garage-closed.png"/></a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarResponsive">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Demande de Services</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Mes Recherches</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" style="border-radius:50px" href="#"><button>Mon Profil</button></a>
-                    </li>
-                </ul>
-                </div>
-            </div>
-        </nav>
-        </header>
-        <br>
-        <br>
-        <br>
-        <br>
-
+<body>
+    <!-- Navigation -->
+    <header>
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
         <div class="container">
-            <div class="row">
-                <div class="col-md">
-                    <div class="carre" id="Services">
+            <a class="navbar-brand" href="../index.php"><img src="https://img.icons8.com/doodle/48/000000/garage-closed.png"/></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Demande de Services</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Mes Recherches</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" style="border-radius:50px" href="#"><button>Mon Profil</button></a>
+                </li>
+            </ul>
+            </div>
+        </div>
+    </nav>
+    </header>
+    <br><br><br><br>
 
-                        <h2><center><strong> Ajout d'un Service</strong></center></h2>    
-                        <form>
+    <div class="container">
+        <div class="row">
+            <div class="carre" style="border: 2px solid black;border-radius:20px;width:800px">
 
-                        <div class="form-row ">
+                <center>
+                <form method="POST" action="../PHP/insert_Services.php">
+                <h2 class="cadre"><center><strong> Ajout d'un Service</strong></center></h2> 
+
+                <div class="form-row ">
                     <div class="form-group col-md-4">
-                    
-                    <p>
-                    <h2> Photo utilisateur : </h2>
-                    </p>
-                    <label for="photoUtilisateur"></label>
-                    <img src="./Img/36b1a6da822d3b0d4eaef522260a8431.jpg">
                     <br>
-                    <br>
-
-
-                    <label for="titreService"></label>
-                    <input type="text" class="form-control" id="Service" placeholder="Titre du service">
-                    
-                    <br>
-                    <label for="descriptionService"></label>
-                    <textarea id="Description" name="Description du service"
-                            rows="4" cols="30">
-                    Le service .....
-                    </textarea>
-                    <br>
-                    <br>
-                    <button type="submit" class="btn btn-primary">Enregistrer le Service</button>
-                    <br>
-                    <br>
-                    <a href="./ajoutDemandeServices.php" class="btn btn-primary btn-lg " 
-                        tabindex="-1" role="button">Retour</a>
+                    <div class="row">
+                        <label for="titreService">Titre du service</label>
+                        <input type="text" name="titre" id="titreService" placeholder="Titre du service" size="30" maxlength="45">
                     </div>
+                    <br>
+                    <div class="row">
+                        <label for="">Catégories du service</label>
+                        <select name="" id="lstCategories"></select>
                     </div>
-                    </center>
-                    </form>
+                    <br>
+                    <div class="row">
+                        <label for="img">Vos images:</label>
+                        <input type="file" id="img">
+                    </div>
+                    <br>
+                    <div class="row">
+                        <label for="prix">Prix du Service:</label>
+                        <input type="number" id="prix" name="prix">
+                    </div>
+                    <br>
+                    <div class="row">
+                        <label for="descriptionService">Description du service :</label>
+                        <textarea id="Description" name="description" placeholder="Description du service" rows="5" cols="30"></textarea>
+                    </div>
+                        <br><br>
+                    <div class="row">
+                        <button type="submit"style="margin-bottom:10px" name="valider">Enregistrer</button>
+                        <a href="./ajoutDemandeServices.php"><button type="submit">Retour</button></a>
+                    </div>
+                    
+                    </div>
+                </div>
+            </form>
+            </center>
+
+            </div>
+        </div>
+    </div>
 
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-    </body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+</body>
 </html>
