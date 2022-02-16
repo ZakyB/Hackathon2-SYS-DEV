@@ -19,7 +19,7 @@ if (isset($_POST['saveDemande'])){
         Values ('$idUtilisateur','$description','$titre','$type')";
         $res = $cnx->prepare($sql2);
         $res->execute();
-        header('Location:../index.php');
+        header('Location:../Pages/index.php');
 
     }else{
         echo "Veuillez compléter tous les champs...";

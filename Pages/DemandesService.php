@@ -6,13 +6,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link href="../CSS/styles.css" rel="stylesheet"></script>
+    <script src="../JS/mesFonctions.js"></script>
+    <script src="../JS/JQuery_3.5.1.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <a href="https://icons8.com/icon/77vA1n1-oWl1/garage-fermé"></a>
+    <script>
+        $
+        (
+            function(){
+                getLesDemandeServices();
+            }
+        );
+    </script>
 </head>
-<body>
-        <!-- Navigation -->
-    <!-- Navigation -->
-    <header>
+    <body>
+         <!-- Navigation -->
+         <header>
         <nav class="navbar navbar-expand-lg navbar-light fixed-top">
             <div class="container">
                 <a class="navbar-brand" href="#"><img src="https://img.icons8.com/doodle/48/000000/garage-closed.png"/></a>
@@ -35,36 +44,35 @@
             </div>
         </nav>
         </header>
-    <br><br><br><br>
+        <br><br>
+        <a class="nav-link" style="border-radius:50px;margin-top:4%;margin-left:80%;" href="./ajoutDemandeServices.php"><button>+ Ajout demande de Service</button></a>
 
-    <div class="container">
-        <div class="row">
-            <div class="carre" style="border: 2px solid black;border-radius:20px;width:800px">
+        <div class="container">
+            <div class="row">
+                <div class="search" style="width:600px;margin-top:2%;padding: 30px 40px;">
 
-            <center>  
-            <form method="POST" action="../PHP/valideAjoutDemandeServ.php">
-            <h2 class="cadre"><center><strong> Demande de services</strong></center></h2>  
-            
-            <div class="form-row ">
-                <div class="form-group col-md-4">
-                    <label for="">Titre de la demande de service</label>
-                    <input type="text" class="form-control" id="titre" name="titre">
-                    <br>
-                    <label for="descriptionService">Description du service :</label>
-                    <textarea id="Description" name="description"rows="4" cols="30"></textarea>
-                    <br><br>
-                    <button type="submit" class="btn btn-primary" value="saveDemande" name="saveDemande">Valider la demande de Service</button>
-                    <br>
+                <center>
+                <form class="form-inline">
+                    <input style="padding: 4.5px" type="search" placeholder="Rechercher" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+                </center>
+                
                 </div>
             </div>
-                
-            </form>
-            <a href="./DemandesService.php"><button type="submit">Retour</button></a>
-            </center>
+        </div>
 
+        <div class="container">
+            <div class="row">
+                <div class="col-md">
+                    <div class="carre" id="demandeServices">
+
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
+
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-</body>
+    </body>
 </html>

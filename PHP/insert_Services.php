@@ -20,7 +20,7 @@ if (isset($_POST['valider'])){
         $sql2 = "insert into service (idUtilisateur,Description,adresse,prix,categorie,TitreService) Values ('$idUtilisateur','$description','$adresse','$prix','$categorie','$titre')";
         $res = $cnx->prepare($sql2);
         $res->execute();
-        header('Location:../index.php');
+        header('Location:../Pages/Services.php');
 
     }else{
         echo "Veuillez compléter tous les champs...";

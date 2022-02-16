@@ -16,7 +16,7 @@ if (isset($_POST['valider'])){
         $data = $resultat->fetch();
         if($data['mdp'] == $decrypt){
             $_SESSION['login']= $login;
-            header('Location:../Pages/compte.php');
+            header('Location:../Pages/Services.php');
         }else {
             echo ("Mot de passe incorrect");
         }

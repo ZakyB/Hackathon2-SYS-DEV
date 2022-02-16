@@ -1,4 +1,17 @@
-<?php session_start();?>
+<?php session_start();
+include ("../PHP/cnx.php");
+$login = $_SESSION['login'];
+$sql = $cnx->prepare('SELECT * from utilisateur where login=?');
+$sql->execute([$login]); 
+$user = $sql->fetch();
+
+$nom = $user[1];
+$prenom = $user[2];
+$adresse = $user[3];
+$mail = $user[4];
+$tel = $user[5];
+
+?>
 <!doctype html>
 <html lang="en">
 <head>
@@ -35,58 +48,46 @@
         </div>
     </nav>
     </header>
-    <br><br><br><br>
+    <br><br><br><br></br></br>
 
     <div class="container">
         <div class="row">
             <div class="carre" style="border: 2px solid black;border-radius:20px;width:800px">
 
-                <center>
-                <form method="POST" action="../PHP/insert_Services.php">
-                <h2 class="cadre"><center><strong> Ajout d'un Service</strong></center></h2> 
-
-                <div class="form-row ">
-                    <div class="form-group col-md-4">
-                    <br>
+            <center><br>
+            <h2 class="cadre"><center><strong> Mon Profil</strong></center></h2> 
+            <br>
+            <div class="form-row ">
+                <div class="form-group col-md-4">
                     <div class="row">
-                        <label for="titreService">Titre du service</label>
-                        <input type="text" name="titre" id="titreService" placeholder="Titre du service" size="30" maxlength="45">
-                    </div>
-                    <br>
-                    <div class="row">
-                        <label for="">Catégories du service</label>
-                        <select name="" id="lstCategories"></select>
+                        <label for="nom">Votre Nom : </label>
+                        <input type="text" name="nom" id="nom" placeholder="<?php echo $nom; ?>" size="30" maxlength="45" disabled>
                     </div>
                     <br>
                     <div class="row">
-                        <label for="img">Vos images:</label>
-                        <input type="file" id="img">
+                        <label for="prennom">Votre Prenom : </label>
+                        <input type="text" name="prenom" id="prenom" placeholder="<?php echo $prenom; ?>" size="30" maxlength="45"disabled>
                     </div>
                     <br>
                     <div class="row">
-                        <label for="prix">Prix du Service:</label>
-                        <input type="number" id="prix" name="prix">
+                        <label for="adresse">Votre Adresse : </label>
+                        <input type="text" name="adresse" id="adresse" placeholder="<?php echo $adresse; ?>" size="30" maxlength="45" disabled>
                     </div>
                     <br>
                     <div class="row">
-                        <label for="descriptionService">Description du service :</label>
-                        <textarea id="Description" name="description" placeholder="Description du service" rows="5" cols="30"></textarea>
+                        <label for="mail">Votre adresse e-mail : </label>
+                        <input type="text" name="mail" id="mail" placeholder="<?php echo $mail; ?>" size="30" maxlength="45" disabled>
                     </div>
-                        <br><br>
+                    <br>
                     <div class="row">
-                        <button type="submit"style="margin-bottom:10px" name="valider">Enregistrer</button>
+                        <label for="tel">Votre Numéro de téléphone : </label>
+                        <input type="text" name="tel" id="tel" placeholder="<?php echo $tel; ?>" size="30" maxlength="45" disabled>
                     </div>
-                    </div>
+                    <br>
+                    <a class="nav-link" style="border-radius:50px" href="#"><button>Modifier mon profil</button></a>
                 </div>
-            </form>
-            <a href="./Services.php"><button type="submit">Retour</button></a>
+            </div>
             </center>
-
             </div>
         </div>
     </div>
-
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-</body>
-</html>
