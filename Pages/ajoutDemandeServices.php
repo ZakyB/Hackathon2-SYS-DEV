@@ -43,11 +43,10 @@
             <div class="form-row ">
                 <div class="form-group col-md-4">
                     <label for="">Titre de la demande de service</label>
-                    <input type="text" class="form-control" id="titre" name="titre">
+                    <input type="text" class="form-control" id="TitreService" name="TitreService">
                     <br>
-                    <label for="descriptionService"></label>
-                    <textarea id="Description" name="description"rows="4" cols="30">
-                            
+                    <label for=""></label>
+                    <textarea id="description" name="description"rows="4" cols="20">
                     </textarea>
                     <br>
                     <br>
