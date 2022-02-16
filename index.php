@@ -36,19 +36,16 @@
         <br><br>
         <div class="container">
             <div class="row">
-                <div class="col-md">
-                    <div class="search">
+                <div class="search" style="width:600px;margin-top:10%;padding: 30px 40px;">
 
-                    <center><form method="GET">
-                        <div class="row">
-                            <input type="search" placeholder="Search" name="s">
-                        </div>
-                        <div class="row">
-                            <input type="submit" name="envoyer" style="width=400px;" onclick="Rechercher()">
-                        </div>
-                    </form></center>
+                <center><form method="GET">
+                <div class="row">
+                    <input type="search" id="search" style="width:600px;height:40px" placeholder="Search" name="s">
+                </div>
+                <br>
+                    <button type="submit" name="envoyer" style="width=400px;padding:5px 10px;border-radius:15px;" onclick="Rechercher();">Rechercher</button>
+                </form></center>
 
-                    </div>
                 </div>
             </div>
         </div>

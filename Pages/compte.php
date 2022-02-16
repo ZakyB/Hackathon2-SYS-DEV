@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link href="../CSS/styles.css" rel="stylesheet"></script>
-    <script src="./JS/mesFonctions.js"></script>
-    <script src="./JS/JQuery_3.5.1.js"></script>
+    <script src="../JS/mesFonctions.js"></script>
+    <script src="../JS/JQuery_3.5.1.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 </head>
     <body>
@@ -37,21 +37,21 @@
         </header>
 
         <br><br>
+        <a class="nav-link" style="border-radius:50px;margin-top:4%;margin-left:80%;" href="./ajoutServices.php"><button>+ Ajout de Service</button></a>
+
         <div class="container">
             <div class="row">
-                <div class="col-md">
-                    <div class="search">
 
-                    <center><form method="GET">
-                        <div class="row">
-                            <input type="search" placeholder="Search" name="s">
-                        </div>
-                        <div class="row">
-                            <input type="submit" name="envoyer" style="width=400px;" onclick="Rechercher()">
-                        </div>
-                    </form></center>
+                <div class="search" style="width:600px;margin-top:5%;padding: 30px 40px;">
 
+                <center><form method="GET">
+                    <div class="row">
+                        <input type="search" id="search" style="width:600px;height:40px" placeholder="Search" name="s">
                     </div>
+                    <br>
+                        <input type="submit" name="envoyer" style="width=400px;padding:5px 10px;border-radius:15px;" value="Rechercher" onclick="Rechercher()">
+                </form></center>
+
                 </div>
             </div>
         </div>
@@ -59,28 +59,14 @@
         <div class="container">
             <div class="row">
                 <div class="col-md">
-                    <div class="carre">
-                    
-                    <br>
-                    <div class="container_service" id="Services">
-                    </div>
+                    <div class="carre" id="Services">
 
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="container">
-            <div class="row">
-                <div class="col-md">
-                    <div class="carre">
-                    
-                    <br>
+                    <!-- <br>
                     <div class="container_service">
                         <div class="row">
                             <div class="col-md-4">
                                 <div class="case_img">
-                                    <img src="./Img/36b1a6da822d3b0d4eaef522260a8431.jpg">
+                                    <img src="../Img/36b1a6da822d3b0d4eaef522260a8431.jpg">
                                 </div>
                             </div>
                             <div class="col-md-8">
@@ -140,7 +126,7 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
 
                     </div>
                 </div>
