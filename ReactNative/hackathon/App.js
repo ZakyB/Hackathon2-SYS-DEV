@@ -7,8 +7,8 @@ import Connexion from './components/Connexion.js'
 export default class App extends React.Component {
   render() {
     return (
-    <Connexion/>
-    //<Search/>
+    //<Connexion/>
+    <Search/>
     )
   }
 }

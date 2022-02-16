@@ -1,20 +1,38 @@
 // Components/Search.js
 
 import React from 'react'
-import { StyleSheet,View, TextInput, Button } from 'react-native'
+import { StyleSheet, View, TextInput, Button, Text, FlatList } from 'react-native'
+import films from '../Helpers/FilmsData.js'
+import ServiceItem from './ServiceItem.js'
+import { getServices } from '../routes.js'
 
-class Connexion extends React.Component {
+class Search extends React.Component {
+
+  //_loadServices() {
+    //getServices().then(data => console.log)
+  //}
+
   render() {
-      return (
-        <View style={{ backgroundColor: 'yellow' }}>
-          <View style={{ height: 335, backgroundColor: 'red' }}></View>
-          <View style={{ height: 335, backgroundColor: 'green' }}></View>
-        </View>
-      )
-   }
+    return (
+      <View style={styles.main_container}>
+        <TextInput style={styles.textinput} placeholder='Titre du film'/>
+        <Button style={{height:50}}title='Rechercher' onPress={() => {}}/>
+        <FlatList
+          data={films}
+          keyExtractor={(item) => item.id.toString() }
+          renderItem={({item}) => <ServiceItem/>}
+          renderItem={({item}) => <ServiceItem film={item}/>}
+        />
+      </View>
+    )
+  }
 }
 
-const styles = {
+const styles = StyleSheet.create({
+  main_container: {
+    flex: 1,
+    marginTop: 20
+  },
   textinput: {
     marginLeft: 5,
     marginRight: 5,
@@ -23,5 +41,6 @@ const styles = {
     borderWidth: 1,
     paddingLeft: 5
   }
-}
-export default Connexion
+})
+
+export default Search
