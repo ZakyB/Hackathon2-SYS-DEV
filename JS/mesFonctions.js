@@ -1,13 +1,14 @@
 function Rechercher(){
+    
+    var info = document.getElementById('search').value;
     $.ajax
     (
         {
             method:"GET",
-            url:"./PHP/rechercher.php",
+            data:"info="+info,
             success: function(data)
             {
-                $('#Services').empty();
-                $('#Services').append(data);
+                alert(data);
             },
             error:function()
             {
@@ -16,3 +17,34 @@ function Rechercher(){
         }
     );
 }
+/* 
+function Rechercher(){
+    $(document).ready(function(){
+        $('#search').keyup(function(){
+            $('#Services').html('');
+        
+            var utilisateur = $(this).val();
+        
+            if(utilisateur != ""){
+            $.ajax
+            (
+                {
+                    method:"GET",
+                    url:"../PHP/rechercher.php",
+                    data: 'user=' + encodeURIComponent(utilisateur),
+                    success: function(data)
+                    {
+                        if(data != ""){
+                            $('#Services').append(data);
+                        }   
+                    },
+                    error:function()
+                    {
+                        alert("error");
+                    }
+                }
+            );
+        }
+    });
+  });
+} */
