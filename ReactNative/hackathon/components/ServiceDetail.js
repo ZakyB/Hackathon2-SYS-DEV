@@ -1,4 +1,4 @@
-// Components/FilmDetail.js
+// Components/serviceDetail.js
 
 import React from 'react'
 import { StyleSheet, View, Text } from 'react-native'
@@ -8,7 +8,7 @@ class ServiceDetail extends React.Component {
   //  console.log(this.props.navigation)
     return (
       <View style={styles.main_container}>
-        <Text>Détail du film {this.props.navigation.getParam('idFilm')}</Text>
+        <Text>Détail du service {this.props.navigation.getParam('idservice')}</Text>
       </View>
     )
   }

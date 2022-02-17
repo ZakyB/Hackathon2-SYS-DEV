@@ -2,7 +2,7 @@
 
 import React from 'react'
 import { StyleSheet, View, TextInput, Button, Text, FlatList } from 'react-native'
-import films from '../Helpers/FilmsData.js'
+import services from '../Helpers/ServicesData.js'
 import ServiceItem from './ServiceItem.js'
 
 import {createAppContainer} from 'react-navigation'
@@ -24,10 +24,10 @@ const Search=()=>{
         <Button style={{height:70}}title='+' onPress={() => navigation.navigate('AjoutProService')}/>
         </View>
         <FlatList
-          data={films}
+          data={services}
           keyExtractor={(item) => item.id.toString() }
           renderItem={({item}) => <ServiceItem/>}
-          renderItem={({item}) => <ServiceItem film={item} displayDetailForFilm={this._displayDetailForFilm}/>}
+          renderItem={({item}) => <ServiceItem service={item} displayDetailForservice={this._displayDetailForservice}/>}
         />
       </View>
     );
