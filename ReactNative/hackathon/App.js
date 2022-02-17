@@ -1,14 +1,16 @@
 // App.js
 
 import React from 'react'
-import Search from './components/Search.js'
-import Connexion from './components/Connexion.js'
+import Navigation from './Navigation/Navigation'
+import {NavigationContainer} from "@react-navigation/native"
+import StackNavigator from './Navigation/StackNavigator.js'
 
 export default class App extends React.Component {
   render() {
     return (
-    //<Connexion/>
-    <Search/>
+      <NavigationContainer>
+      <StackNavigator/>
+      </NavigationContainer>
     )
   }
 }

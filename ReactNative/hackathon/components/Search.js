@@ -4,40 +4,47 @@ import React from 'react'
 import { StyleSheet, View, TextInput, Button, Text, FlatList } from 'react-native'
 import films from '../Helpers/FilmsData.js'
 import ServiceItem from './ServiceItem.js'
-import { getServices } from '../routes.js'
 
-class Search extends React.Component {
+import {createAppContainer} from 'react-navigation'
+import { createStackNavigator } from 'react-navigation-stack'
+import {useNavigation} from '@react-navigation/native'
 
-  //_loadServices() {
-    //getServices().then(data => console.log)
-  //}
 
-  render() {
+const Search=()=>{
+  const navigation = useNavigation();
+
+  //  console.log(this.props)
     return (
       <View style={styles.main_container}>
-        <TextInput style={styles.textinput} placeholder='Titre du film'/>
-        <Button style={{height:50}}title='Rechercher' onPress={() => {}}/>
+        <TextInput style={styles.textinput} placeholder='Service recherché'/>
+
+        <View style={{flexDirection: "row" , justifyContent: 'space-evenly' }}>
+        <Button style={{height:40}} title="Retour" onPress={() => navigation.navigate('Choix')}/>
+        <Button style={{height:40}} title="Mon Profil" onPress={() => navigation.navigate('MonProfil')}/>
+        <Button style={{height:70}}title='+' onPress={() => navigation.navigate('AjoutProService')}/>
+        </View>
         <FlatList
           data={films}
           keyExtractor={(item) => item.id.toString() }
           renderItem={({item}) => <ServiceItem/>}
-          renderItem={({item}) => <ServiceItem film={item}/>}
+          renderItem={({item}) => <ServiceItem film={item} displayDetailForFilm={this._displayDetailForFilm}/>}
         />
       </View>
-    )
+    );
   }
-}
+
+
 
 const styles = StyleSheet.create({
   main_container: {
     flex: 1,
-    marginTop: 20
+    marginTop: 50
   },
   textinput: {
     marginLeft: 5,
     marginRight: 5,
     height: 50,
-    borderColor: '#000000',
+    borderColor: 'blue',
     borderWidth: 1,
     paddingLeft: 5
   }

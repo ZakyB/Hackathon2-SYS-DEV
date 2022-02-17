@@ -2,25 +2,34 @@
 
 import React from 'react'
 import { View, TextInput, Button, Text } from 'react-native'
+import {useNavigation} from '@react-navigation/native'
 
-class Search extends React.Component {
-  render() {
+
+const Connexion =()=>{
+  const navigation = useNavigation();
     return (
       <View style={styles.mainContainer}>
-        <Text style={{marginTop:40, fontSize:30, color:'blue', marginLeft:120}}>Connexion</Text>
-        <TextInput style={styles.textinput} placeholder='Login'/>
-        <TextInput style={styles.textinput} placeholder='Password'/>
-        <Button title='Rechercher' onPress={() => {}}/>
+        <Text style={ styles.text}>Bienvenue sur BSS !</Text>
+        <Text style={{marginLeft:85, fontSize:20, color:'#299ee6'}}>Veuillez vous connecter</Text>
+        <View style={{marginTop:50}}>
+        <TextInput style={styles.textinput} placeholder='Adresse Email'/>
+        <TextInput style={styles.textinput} placeholder='Mot de passe' secureTextEntry={true}/>
+        </View>
+        <View style={{marginTop:60}}>
+        <Button title='Se connecter' onPress={()=>navigation.navigate("Choix")}/>
+        <Button title="S'inscrire" onPress={()=>navigation.navigate("Inscription")}/>
+        </View>
       </View>
-    )
+    );
 
   }
-}
+
 
 const styles = {
   mainContainer: {
     flex:1,
-    justifyContent:'center'
+    marginTop:250,
+    flexDirection:'colum'
   },
   textinput: {
     marginLeft:10,
@@ -28,7 +37,12 @@ const styles = {
     height:50,
     borderColor: 'black',
     borderWidth: 1,
-    paddingLeft:5
-  }
+    paddingLeft:5,
+    marginTop:5
+  },
+  text:{
+  marginLeft:60,fontSize:30, color:'blue'
+
 }
-export default Search
+}
+export default Connexion
