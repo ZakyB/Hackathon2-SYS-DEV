@@ -56,8 +56,7 @@
                     </div>
                     <br>
                     <label for="">description demande de service :</label>
-                    <textarea id="description" name="description"rows="4" cols="20">
-                    </textarea>
+                    <textarea id="Description" name="description" placeholder="Description du service" rows="5" cols="30"></textarea>
                     <br>
                     <br>
                     <button type="submit" class="btn btn-primary" value="saveDemande" name="saveDemande">Valider la demande de Service</button>

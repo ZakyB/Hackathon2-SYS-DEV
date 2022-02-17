@@ -12,13 +12,13 @@ if (isset($_POST['saveDemande'])){
 
         $idUtilisateur = $user[0];
         $TitreService = htmlspecialchars($_REQUEST['TitreService']);
-        $description = htmlspecialchars($_REQUEST['description']);
+        $description = addslashes($_REQUEST['description']);
         $prix = $_REQUEST['prix'];
         $type = 1;
         $categorie = 1;
 
-        $sql2 = "insert into service (idUtilisateur,TitreService,description,type,Prix) 
-        Values ('$idUtilisateur','$TitreService','$description','$type','$prix')";
+        $sql2 = "insert into service (idUtilisateur,TitreService,description,type,Prix,categorie) 
+        Values ('$idUtilisateur','$TitreService','$description','$type','$prix','$categorie')";
         $res = $cnx->prepare($sql2);
         $res->execute();
         header('Location:../Pages/DemandesService.php');

@@ -51,8 +51,9 @@ function Rechercher(){
                 {
                     if(data != ""){
                         $('#Services').empty();
-                        $('#ServicesRechercher').empty();
-                        $('#ServicesRechercher').append(data);
+                        $('#Services').append(data);
+                        $('#demandeServices').empty();
+                        $('#demandeServices').append(data);
                     }   
                 },
                 error:function()

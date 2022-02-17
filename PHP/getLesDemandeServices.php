@@ -2,7 +2,7 @@
 
 include ('./cnx.php');
 
-$sql = $cnx ->prepare("select * from service INNER JOIN categorie ON service.categorie = categorie.id where Type != 0 order by service.id desc");
+$sql = $cnx ->prepare("select * from service INNER JOIN categorie ON service.categorie = categorie.id where Type = 1 order by service.id desc");
 $sql -> execute();
 
 foreach($sql->fetchAll(PDO::FETCH_ASSOC) as $ligne)
