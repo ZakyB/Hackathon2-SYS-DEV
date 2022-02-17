@@ -9,7 +9,7 @@ import {createAppContainer} from 'react-navigation'
 import { createStackNavigator } from 'react-navigation-stack'
 import {useNavigation} from '@react-navigation/native'
 
-
+//Page affichant les demandes de Service
 const DemandeDeService=()=>{
   const navigation = useNavigation();
 
@@ -35,7 +35,7 @@ const DemandeDeService=()=>{
   }
 
 
-
+//fiche de style
 const styles = StyleSheet.create({
   main_container: {
     flex: 1,

@@ -1,7 +1,7 @@
 import React from 'react'
 import {StyleSheet,TextInput, Button, View,Text} from 'react-native'
 import {useNavigation} from '@react-navigation/native'
-
+//Page permettant l'ajout de Service
 const AjoutProService=()=>{
 const navigation = useNavigation();
     return(
@@ -29,6 +29,7 @@ const navigation = useNavigation();
     </View>
   );
 }
+//fiche de style
 const styles = StyleSheet.create({
   texti:{
     paddingLeft:6,

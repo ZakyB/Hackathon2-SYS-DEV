@@ -5,6 +5,7 @@ import { StyleSheet, View, TextInput, Button, Text, FlatList } from 'react-nativ
 import services from '../Helpers/ServicesData.js'
 import ServiceItem from './ServiceItem.js'
 
+//page permettant l'affichange des services proposés
 import {createAppContainer} from 'react-navigation'
 import { createStackNavigator } from 'react-navigation-stack'
 import {useNavigation} from '@react-navigation/native'
@@ -32,9 +33,10 @@ const Search=()=>{
       </View>
     );
   }
+  //appel du composant Service qui est definis dans Service item
 
 
-
+//style
 const styles = StyleSheet.create({
   main_container: {
     flex: 1,

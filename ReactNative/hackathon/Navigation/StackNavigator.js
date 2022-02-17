@@ -12,7 +12,7 @@ import AjoutProService from '../components/AjoutProService'
 import Modifier from '../components/Modifier'
 
 const Stack = createNativeStackNavigator();
-
+//StackNavigator permet de creer une naviagation empiler
 const StackNavigator = () => {
   return(
     <Stack.Navigator screenOptions={{headerShown: false}}>
@@ -32,5 +32,5 @@ const StackNavigator = () => {
       </Stack.Navigator>
   );
 };
-
+//expoer du StackNavigator dans Apps.js pour pouvoir naviguer entre les pages 
 export default StackNavigator;

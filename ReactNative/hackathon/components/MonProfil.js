@@ -1,7 +1,7 @@
 import React from 'react'
 import {StyleSheet,TextInput, Button, View, Image,Text} from 'react-native'
 import {useNavigation} from '@react-navigation/native'
-
+//Affiche le profil de l'utilisateur actuel
 const MonProfil=()=>{
 const navigation = useNavigation();
     return(
@@ -28,7 +28,7 @@ const navigation = useNavigation();
     </View>
   );
   }
-
+//fiche de style
 const styles = StyleSheet.create({
   main_container:{
     marginTop : 50,

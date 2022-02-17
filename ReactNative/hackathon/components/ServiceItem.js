@@ -2,7 +2,8 @@
 
 import React from 'react'
 import { StyleSheet, View, Text, Image, TouchableOpacity } from 'react-native'
-
+//Composant qui permet d'afficher un service
+//appel dans DeamndeDeService.js et ServicePro
 class ServiceItem extends React.Component {
   render() {
       const {service, displayDetailForservice} = this.props
@@ -32,7 +33,7 @@ class ServiceItem extends React.Component {
       )
   }
 }
-
+//style
 const styles = StyleSheet.create({
   main_container: {
     marginTop:40,

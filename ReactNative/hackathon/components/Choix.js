@@ -4,7 +4,7 @@ import React from 'react'
 import { StyleSheet,View, TextInput, Button, Text } from 'react-native'
 import {useNavigation} from '@react-navigation/native'
 
-
+//Page d'accueil après connexion
 const Choix =()=>{
   const navigation = useNavigation();
     return (
@@ -22,7 +22,7 @@ const Choix =()=>{
 
   }
 
-
+//fiche de style
 const styles = StyleSheet.create( {
   mainContainer: {
     flex:1,
@@ -35,6 +35,6 @@ const styles = StyleSheet.create( {
 
 }
 })
-
+//export du composant
 export default Choix
   //<Button title="Demande de Services" onPress={()=>navigation.navigate("")}/>

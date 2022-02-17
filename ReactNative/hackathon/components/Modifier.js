@@ -1,7 +1,7 @@
 import React from 'react'
 import {StyleSheet,TextInput, Button, View,Text} from 'react-native'
 import {useNavigation} from '@react-navigation/native'
-
+//page permettant de modifier les
 const Modifier=()=>{
 const navigation = useNavigation();
     return(
@@ -27,6 +27,7 @@ const navigation = useNavigation();
     </View>
   );
 }
+//fiche de style
 const styles = StyleSheet.create({
   textinput:{
     paddingLeft:6,

@@ -1,7 +1,7 @@
 import React from 'react'
 import {StyleSheet,TextInput, Button, View,Text} from 'react-native'
 import {useNavigation} from '@react-navigation/native'
-
+//Page permettant l'inscription
 const Inscription=()=>{
 const navigation = useNavigation();
     return(
@@ -33,6 +33,7 @@ const navigation = useNavigation();
     </View>
   );
 }
+//fiche de style
 const styles = StyleSheet.create({
   textinput:{
     paddingLeft:6,

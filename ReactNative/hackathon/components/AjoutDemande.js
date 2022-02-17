@@ -1,7 +1,7 @@
 import React from 'react'
 import {StyleSheet,TextInput, Button, View,Text} from 'react-native'
 import {useNavigation} from '@react-navigation/native'
-
+// Page permettant l'ajout d'une demande de service
 const AjoutDemande=()=>{
 const navigation = useNavigation();
     return(
@@ -29,7 +29,7 @@ const navigation = useNavigation();
     </View>
   );
 }
-
+//fiche de style
 const styles = StyleSheet.create({
   texti:{
     paddingLeft:6,
@@ -42,5 +42,5 @@ const styles = StyleSheet.create({
 
   }
 })
-
+//export du composant
 export default AjoutDemande;

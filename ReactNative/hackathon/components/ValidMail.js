@@ -4,7 +4,7 @@ import React from 'react'
 import { StyleSheet,View, TextInput, Button, Text } from 'react-native'
 import {useNavigation} from '@react-navigation/native'
 
-
+//Afficher apres l'envoi d'un mail
 const ValidMail =()=>{
   const navigation = useNavigation();
     return (
@@ -22,7 +22,7 @@ const ValidMail =()=>{
 
   }
 
-
+//Style
 const styles = StyleSheet.create( {
   mainContainer: {
     flex:1,

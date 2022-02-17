@@ -1,7 +1,7 @@
 import React from 'react'
 import {StyleSheet,TextInput, Button, View,Text} from 'react-native'
 import {useNavigation} from '@react-navigation/native'
-
+//Page permettant l'envoie d'un mail apres selection d'un service
 const Contact=()=>{
 const navigation = useNavigation();
     return(
@@ -20,6 +20,7 @@ const navigation = useNavigation();
     </View>
   );
 }
+//fiche de style
 const styles = StyleSheet.create({
   textinput:{
     paddingLeft:6,
@@ -31,4 +32,5 @@ const styles = StyleSheet.create({
       borderWidth:1
     }
 })
+//export du composant
 export default Modifier;

@@ -2,11 +2,14 @@
 
 import React from 'react'
 import {StyleSheet, View, TextInput, Button, Text, Image} from 'react-native'
+import { useState } from 'react';
 import {useNavigation} from '@react-navigation/native'
 
-
+//Page de connexion
 const Connexion =()=>{
   const navigation = useNavigation();
+  const [email, setEmail] = useState("Germain");
+  const [password, setPassword] = useState("Paris");
     return (
 
       <View style={styles.mainContainer}>
@@ -16,8 +19,8 @@ const Connexion =()=>{
 
         <Text style={{marginLeft:85, fontSize:20, color:'#299ee6'}}>Veuillez vous connecter</Text>
         <View style={{marginTop:50}}>
-        <TextInput style={styles.textinput} placeholder='Adresse Email'/>
-        <TextInput style={styles.textinput} placeholder='Mot de passe' secureTextEntry={true}/>
+        <TextInput style={styles.textinput} placeholder='Adresse Email'onChangeText={(email) => setEmail(email)}/>
+        <TextInput style={styles.textinput} placeholder='Mot de passe' secureTextEntry={true} onChangeText={(password) => setPassword(password)} />
         </View>
         <View style={{marginTop:60}}>
         <Button title='Se connecter' onPress={()=>navigation.navigate("Choix")}/>
@@ -28,7 +31,7 @@ const Connexion =()=>{
 
   }
 
-
+//fiche de style
 const styles = StyleSheet.create({
   mainContainer: {
     flex:1,
