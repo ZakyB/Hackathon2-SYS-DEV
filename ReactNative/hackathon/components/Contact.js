@@ -14,7 +14,7 @@ const navigation = useNavigation();
 
     </View>
     <View style={{marginTop:75,flexDirection: "row" , justifyContent: 'space-evenly' }}>
-    <Button style={{marginTop:35}}title="Retour" onPress={()=>navigation.navigate("Search")}/>
+    <Button style={{marginTop:35}}title="Retour" onPress={()=>navigation.navigate("ServicePro")}/>
     <Button  title="Valider" onPress={()=>navigation.navigate("MonProfil")}/>
     </View>
     </View>

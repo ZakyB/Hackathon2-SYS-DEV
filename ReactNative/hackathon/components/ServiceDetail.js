@@ -3,7 +3,7 @@
 import React from 'react'
 import { StyleSheet, View, Text } from 'react-native'
 
-class FilmDetail extends React.Component {
+class ServiceDetail extends React.Component {
   render() {
   //  console.log(this.props.navigation)
     return (
@@ -20,4 +20,4 @@ const styles = StyleSheet.create({
   }
 })
 
-export default FilmDetail
+export default ServiceDetail

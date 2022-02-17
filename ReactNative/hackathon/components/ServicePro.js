@@ -1,4 +1,4 @@
-// Components/Search.js
+// Components/Services
 
 import React from 'react'
 import { StyleSheet, View, TextInput, Button, Text, FlatList } from 'react-native'

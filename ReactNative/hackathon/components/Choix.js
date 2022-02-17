@@ -14,7 +14,7 @@ const Choix =()=>{
 
       <View style={{flex:2,justifyContent :'space-evenly'}}>
           <Text style={styles.text}> C'est à vous de choisir ! </Text>
-        <Button title='Consultations des Services' onPress={()=>navigation.navigate("Search")}/>
+        <Button title='Consultations des Services' onPress={()=>navigation.navigate("ServicePro")}/>
         <Button title='Consultations des Demandes de Services' onPress={()=>navigation.navigate("DemandeDeService")}/>
       </View>
       </View>
