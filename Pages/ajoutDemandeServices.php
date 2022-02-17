@@ -48,11 +48,13 @@
             <div class="form-row ">
                 <div class="form-group col-md-4">
                     <label for="">Titre de la demande de service</label>
-                    <input type="text" class="form-control" id="titre" name="titre">
+                    <input type="text" class="form-control" id="TitreService" name="TitreService">
                     <br>
-                    <label for="descriptionService">Description du service :</label>
-                    <textarea id="Description" name="description"rows="4" cols="30"></textarea>
-                    <br><br>
+                    <label for=""></label>
+                    <textarea id="description" name="description"rows="4" cols="20">
+                    </textarea>
+                    <br>
+                    <br>
                     <button type="submit" class="btn btn-primary" value="saveDemande" name="saveDemande">Valider la demande de Service</button>
                     <br>
                 </div>
