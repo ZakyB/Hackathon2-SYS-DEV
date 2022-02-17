@@ -1,5 +1,5 @@
 import React from 'react'
-import {TextInput, Button, View,Text} from 'react-native'
+import {StyleSheet,TextInput, Button, View,Text} from 'react-native'
 import {useNavigation} from '@react-navigation/native'
 
 const AjoutDemande=()=>{
@@ -9,17 +9,17 @@ const navigation = useNavigation();
     <View>
     <Text style={{paddingLeft:36,marginLeft:90, marginRight:75,fontSize:30, color:'blue', borderColor: 'blue', borderWidth:3}}>Ajout d'une demande de service</Text>
     <TextInput
-    style={{paddingLeft:6,height: 50,marginLeft:10,marginRight:10, marginTop:30,borderColor: 'gray', borderWidth:1}} placeholder='Titre de la demande'/>
+    style={styles.texti} placeholder='Titre de la demande'/>
     <TextInput
-    style={{paddingLeft:6,height: 50,marginLeft:10,marginRight:10, marginTop:10,borderColor: 'gray', borderWidth:1}}placeholder='Date'/>
+    style={styles.texti}placeholder='Date'/>
     <TextInput
-    style={{paddingLeft:6,height: 50,marginLeft:10,marginRight:10, marginTop:10,borderColor: 'gray', borderWidth:1}}placeholder='Ville'/>
+    style={styles.texti}placeholder='Ville'/>
     <TextInput
-    style={{paddingLeft:6,height: 50,marginLeft:10,marginRight:10, marginTop:10,borderColor: 'gray', borderWidth:1}}placeholder='Coût'/>
+    style={styles.text}placeholder='Coût'/>
     <TextInput
-    style={{paddingLeft:6,height: 50,marginLeft:10,marginRight:10, marginTop:10,borderColor: 'gray', borderWidth:1}}placeholder='Catégorie'/>
+    style={styles.texti}placeholder='Catégorie'/>
     <TextInput
-    style={{paddingLeft:6,height: 100,marginLeft:10,marginRight:10, marginTop:10,borderColor: 'gray', borderWidth:1}}placeholder='Description'/>
+    style={styles.texti}placeholder='Description'/>
 
     </View>
     <View style={{marginTop:50,flexDirection: "row" , justifyContent: 'space-evenly'}}>
@@ -30,6 +30,17 @@ const navigation = useNavigation();
   );
 }
 
+const styles = StyleSheet.create({
+  texti:{
+    paddingLeft:6,
+    height: 50,
+    marginLeft:10,
+    marginRight:10,
+     marginTop:30,
+     borderColor: 'gray',
+      borderWidth:1
 
+  }
+})
 
 export default AjoutDemande;

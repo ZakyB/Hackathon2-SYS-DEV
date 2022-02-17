@@ -1,7 +1,7 @@
 // Components/Search.js
 
 import React from 'react'
-import { View, TextInput, Button, Text } from 'react-native'
+import {StyleSheet, View, TextInput, Button, Text } from 'react-native'
 import {useNavigation} from '@react-navigation/native'
 
 
@@ -25,11 +25,11 @@ const Connexion =()=>{
   }
 
 
-const styles = {
+const styles = StyleSheet.create({
   mainContainer: {
     flex:1,
     marginTop:250,
-    flexDirection:'colum'
+    
   },
   textinput: {
     marginLeft:10,
@@ -44,5 +44,5 @@ const styles = {
   marginLeft:60,fontSize:30, color:'blue'
 
 }
-}
+});
 export default Connexion

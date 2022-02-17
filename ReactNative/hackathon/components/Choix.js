@@ -1,7 +1,7 @@
 // Components/Choix.js
 
 import React from 'react'
-import { View, TextInput, Button, Text } from 'react-native'
+import { StyleSheet,View, TextInput, Button, Text } from 'react-native'
 import {useNavigation} from '@react-navigation/native'
 
 
@@ -23,10 +23,9 @@ const Choix =()=>{
   }
 
 
-const styles = {
+const styles = StyleSheet.create( {
   mainContainer: {
     flex:1,
-    flexDirection:'colum',
     color :'blue',
     fontSize : 30,
     marginTop :120
@@ -35,7 +34,7 @@ const styles = {
   marginLeft:40,fontSize:30, color:'#200a8c',
 
 }
-}
+})
 
 export default Choix
   //<Button title="Demande de Services" onPress={()=>navigation.navigate("")}/>

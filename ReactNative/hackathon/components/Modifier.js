@@ -2,12 +2,12 @@ import React from 'react'
 import {StyleSheet,TextInput, Button, View,Text} from 'react-native'
 import {useNavigation} from '@react-navigation/native'
 
-const Inscription=()=>{
+const Modifier=()=>{
 const navigation = useNavigation();
     return(
     <View style={{marginTop:70, flex: 1}}>
     <View>
-    <Text style={{paddingLeft:36,marginLeft:90, marginRight:90,fontSize:30, color:'blue', borderColor: 'blue', borderWidth:3}}>Inscription</Text>
+    <Text style={{textAlign:'center',marginLeft:90, marginRight:90, fontSize:30, color:'blue', borderColor: 'blue', borderWidth:3}}>Modifier</Text>
     <TextInput
     style={styles.textinput} placeholder='Nom'/>
     <TextInput
@@ -18,17 +18,11 @@ const navigation = useNavigation();
     style={styles.textinput}placeholder='Mail'/>
     <TextInput
     style={styles.textinput}placeholder='Tel'/>
-    <TextInput
-    style={styles.textinput}placeholder='Date de naissance'/>
-    <TextInput
-    style={styles.textinput}placeholder='Mot de passe'/>
-    <TextInput
-    style={styles.textinput}placeholder='Confirmer votre mot de passe'/>
 
     </View>
-    <View style={{marginTop:40,flexDirection: "row" , justifyContent: 'space-evenly' }}>
-    <Button style={{marginTop:25}}title="Retour" onPress={()=>navigation.navigate("Connexion")}/>
-    <Button  title="Valider" onPress={()=>navigation.navigate("Connexion")}/>
+    <View style={{marginTop:75,flexDirection: "row" , justifyContent: 'space-evenly' }}>
+    <Button style={{marginTop:35}}title="Retour" onPress={()=>navigation.navigate("MonProfil")}/>
+    <Button  title="Valider" onPress={()=>navigation.navigate("MonProfil")}/>
     </View>
     </View>
   );
@@ -44,7 +38,4 @@ const styles = StyleSheet.create({
       borderWidth:1
     }
 })
-
-
-
-export default Inscription;
+export default Modifier;

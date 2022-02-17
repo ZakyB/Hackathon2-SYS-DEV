@@ -9,6 +9,7 @@ import Choix from '../components/Choix'
 import DemandeDeService from '../components/DemandeDeService'
 import AjoutDemande from '../components/AjoutDemande'
 import AjoutProService from '../components/AjoutProService'
+import Modifier from '../components/Modifier'
 
 const Stack = createNativeStackNavigator();
 
@@ -16,6 +17,7 @@ const StackNavigator = () => {
   return(
     <Stack.Navigator screenOptions={{headerShown: false}}>
       <Stack.Group>
+      
         <Stack.Screen name="Connexion" component={Connexion}/>
         <Stack.Screen name="Search" component={Search}/>
         <Stack.Screen name="MonProfil" component={MonProfil}/>
@@ -24,6 +26,7 @@ const StackNavigator = () => {
         <Stack.Screen name="DemandeDeService" component={DemandeDeService}/>
         <Stack.Screen name="AjoutDemande" component={AjoutDemande}/>
         <Stack.Screen name="AjoutProService" component={AjoutProService}/>
+        <Stack.Screen name="Modifier" component={Modifier}/>
 
       </Stack.Group>
       </Stack.Navigator>
