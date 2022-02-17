@@ -35,10 +35,27 @@ function getLesDemandeServices()
         }
     );
 }
-
+function getLesCategories()
+{
+    $.ajax(
+        {
+            //appel a un script php
+            url:"../PHP/getLesCategories.php",
+            success: function(data)
+            {
+                $('#lstCategories').append(data);
+            },
+            error:function()
+            {
+                alert("erreur sur l'appel des services");
+            }
+        }
+    );
+}
 function Rechercher(){
     
     var info = document.getElementById('search').value;
+    var cat = document.getElementById('lstCategories').value;
     if (info != ""){
         // alert(info);
         $.ajax
@@ -46,7 +63,7 @@ function Rechercher(){
             {
                 method:"GET",
                 url:"../PHP/rechercher.php",
-                data: 'info='+info,
+                data: 'info='+info+"&cat="+cat,
                 success: function(data)
                 {
                     if(data != ""){

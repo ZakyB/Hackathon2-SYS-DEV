@@ -2,7 +2,8 @@
 include("./cnx.php");
 
     $info = htmlspecialchars($_GET['info']);
-    $sql2 = $cnx->prepare("Select * from service INNER JOIN categorie ON service.categorie = categorie.id where Description like'%".$info."%' or libelle like '%".$info."%'");
+    $cat = htmlspecialchars($_GET['cat']);
+    $sql2 = $cnx->prepare("Select * from service INNER JOIN categorie ON service.categorie = categorie.id where service.categorie=".$cat." AND (Description like'%".$info."%' or libelle like '%".$info."%')");
     $sql2->execute();
 
     foreach($sql2->fetchAll(PDO::FETCH_ASSOC) as $ligne)
