@@ -1,36 +1,45 @@
-var mysql      = require('mysql');
-const express  = require("express");
-const app      = express();
-var connection = mysql.createConnection({
+
+var express = require('express');
+var app  = express();
+const axios = require('axios');
+var mysql = require('mysql');
+var bodyParser = require('body-parser');
+var cors = require('cors')
+app.use(cors());
+
+app.use(bodyParser.json({type:'application/json'}));
+app.use(bodyParser.urlencoded({extended:true}));
+
+var con = mysql.createConnection({
+
   host     : 'mysql-69153-0.cloudclusters.net',
   user     : 'hackathon',
   password : 'bourse123',
   database : 'Hackathon',
   port     : '16568'
+
 });
 
-connection.connect();
+var server = app.listen(3001, function(){
+  var host = server.address().address
+  var port = server.address().port
+  console.log("start");
 
-connection.query('SELECT * FROM service', function (error, results, fields) {
-  if (error) throw error;
-  console.log('The solution is: ', results);
 });
 
-
-app.get("/app/test",(req, res) => {
-  res.send("hello world");
+con.connect(function(error){
+  if(error) console.log(error);
+  else console.log("connected");
 });
 
-app.get("/",(req,res) => {
-    const sqlSelect = "SELECT * from utilisateur";
-    connection.query(sqlSelect,(err,result) => {
-    res.send(result);
+app.get('/utilisateurs', function(req, res){
+  con.query('select * from utilisateur', function(error, rows, fields){
+        if(error) console.log(error);
+
+        else{
+            console.log(JSON.stringify(rows));
+            res.send(JSON.stringify(rows));
+        }
+
   });
 });
-
-app.listen(3001, () => {
-  console.log("running on port 3001");
-});
-
-
-connection.end();

@@ -1,18 +1,23 @@
 <?php
-//connexion a la base de données
-// dsn = Data Source Name = driver MYSQL
-$dsn='mysql:dbname=Hackathon;host=mysql-69153-db.mysql-69153:16568';
-//login
-$login='Hackathon';
-// Mot de passe
-$motDePasse='bourse123';
-// Connexion au serveur MySQL
-try{
-    $cnx = new PDO($dsn, $login, $motDePasse,
-            array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
-            PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES utf8'));
+
+$host = 'mysql-69153-0.cloudclusters.net';
+$db   = 'Hackathon';
+$user = 'admin';
+$pass = '1bS4pmwO';
+$port = "16568";
+$charset = 'utf8mb4';
+
+$options = [
+    \PDO::ATTR_ERRMODE            => \PDO::ERRMODE_EXCEPTION,
+    \PDO::ATTR_DEFAULT_FETCH_MODE => \PDO::FETCH_ASSOC,
+    \PDO::ATTR_EMULATE_PREPARES   => false,
+];
+$dsn = "mysql:host=$host;dbname=$db;charset=$charset;port=$port";
+try {
+     $pdo = new \PDO($dsn, $user, $pass, $options);
+     echo "Connected successfully";
+} catch (\PDOException $e) {
+     echo "Connection failed: " . $e->getMessage();
 }
-catch (PDOException $e){
-	die('Erreur : ' . $e->getMessage());
-}
+
 ?>

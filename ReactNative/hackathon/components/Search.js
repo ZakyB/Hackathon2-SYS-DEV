@@ -4,7 +4,7 @@ import React from 'react'
 import { StyleSheet, View, TextInput, Button, Text, FlatList } from 'react-native'
 import films from '../Helpers/FilmsData.js'
 import ServiceItem from './ServiceItem.js'
-import { getServices } from '../routes.js'
+
 
 class Search extends React.Component {
 
