@@ -8,6 +8,7 @@ class ConsultationService extends React.Component{
    }
 
    fetchData= async()=>{
+     //Mon pc doit rester allumer pour que ça marche
      const response = await fetch('https://db31-2a01-e34-ecab-260-782a-d047-14a2-c856.eu.ngrok.io/utilisateurs');
      const utilisateurs = await response.json();
      this.setState({data: utilisateurs});
