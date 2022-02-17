@@ -52,11 +52,11 @@
                 <div class="search" style="width:600px;margin-top:2%;padding: 30px 40px;">
 
                 <center>
-                <form class="form-inline">
+                <div class="form-inline">
                     <select name="" id="lstCategories"></select>
                     <input style="padding: 4.5px" type="search" id="search" placeholder="Rechercher" aria-label="Search">
-                    <button class="btn btn-outline-success" type="submit" onclick="Rechercher()">Rechercher</button>
-                </form>
+                    <button class="btn btn-outline-success" onclick="Rechercher()">Rechercher</button>
+                </div>
                 <br>
                 <a href="#" name="maRecherche" style="margin-left:60%;">Sauvegarder la recherche</a>
                 </center>

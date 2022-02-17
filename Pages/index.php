@@ -44,10 +44,10 @@
                 <div class="search" style="width:600px;margin-top:10%;padding: 30px 40px;">
 
                 <center>
-                <form class="form-inline">
-                    <input style="padding: 4.5px;" type="search" placeholder="Rechercher" aria-label="Search">
-                    <button class="btn btn-outline-success" type="submit">Search</button>
-                </form>
+                <div class="form-inline">
+                    <input style="padding: 4.5px" type="search" id="search" placeholder="Rechercher" aria-label="Search">
+                    <button class="btn btn-outline-success" onclick="Rechercher()">Rechercher</button>
+                </div>
                 </center>
                 
                 </div>
@@ -65,7 +65,15 @@
                 </div>
             </div>
         </div>
- 
+        <div class="container">
+            <div class="row">
+                <div class="col-md">
+                    <div class="carre" id="ServicesRechercher">
+
+                    </div>
+                </div>
+            </div>
+        </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     </body>

@@ -51,6 +51,7 @@ function Rechercher(){
                 {
                     if(data != ""){
                         $('#Services').empty();
+                        $('#ServicesRechercher').empty();
                         $('#ServicesRechercher').append(data);
                     }   
                 },

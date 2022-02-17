@@ -2,10 +2,8 @@
 include("./cnx.php");
 
     $info = htmlspecialchars($_GET['info']);
-    echo "<div class='row'>
-    <h4 style='font: size 20px;font-weight: bold;' ><em>".info."</em></h4>
-</div>";
-    /* $sql2 = $cnx->prepare("Select * from service INNER JOIN categorie ON service.categorie = categorie.id where Description like'%".$info."%' or libelle like '%".$info."%'");
+    echo "<div class='row'><h4 style='font: size 20px;font-weight: bold;' ><em>".$info."</em></h4></div>";
+    $sql2 = $cnx->prepare("Select * from service INNER JOIN categorie ON service.categorie = categorie.id where Description like'%".$info."%' or libelle like '%".$info."%'");
     $sql2->execute();
 
     foreach($sql2->fetchAll(PDO::FETCH_ASSOC) as $ligne)
@@ -39,7 +37,6 @@ include("./cnx.php");
                 </div>
             </div>
         </div>
-    </div>"; */
+    </div>"; 
     }
-
 ?>
