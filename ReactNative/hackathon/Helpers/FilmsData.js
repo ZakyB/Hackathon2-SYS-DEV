@@ -5,7 +5,7 @@ export default data = [
       title:"Recherche d'un(e) Jardinier(e)",
       poster_path:"",
       original_title:"",
-      overview:"Bonjour je suis à la recherche d'un jardinier pour mon jardin. Mon jardin fais plus de 10 héctar et je ne peux m'en occuper, il est composé de nombreuses plantes exotiques tel des Chlorophytums ainsi que des Brugmansias. Je vous paye...",
+      overview:"Bonjour je suis à la recherche d'un jardinier pour mon jardin. Mon jardin fais plus de 10 héctarss et je ne peux m'en occuper, il est composé de nombreuses plantes exotiques tel des Chlorophytums ainsi que des Brugmansias. Je vous paye...",
       release_date:"13-01-2022"
    },
    {

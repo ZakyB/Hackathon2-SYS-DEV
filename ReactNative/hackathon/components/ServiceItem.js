@@ -43,7 +43,7 @@ const styles = StyleSheet.create({
     width: 120,
     height: 180,
     margin: 5,
-    backgroundColor: 'blue'
+    backgroundColor: '#2d75c2'
   },
   content_container: {
     flex: 1,
