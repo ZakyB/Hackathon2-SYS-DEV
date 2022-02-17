@@ -39,21 +39,30 @@ function getLesDemandeServices()
 function Rechercher(){
     
     var info = document.getElementById('search').value;
-    $.ajax
-    (
-        {
-            method:"GET",
-            data:"info="+info,
-            success: function(data)
+    if (info != ""){
+        // alert(info);
+        $.ajax
+            (
             {
-                alert(data);
-            },
-            error:function()
-            {
-                alert("error");
+                method:"GET",
+                url:"../PHP/rechercher.php",
+                data: 'info='+info,
+                success: function(data)
+                {
+                    if(data != ""){
+                        $('#Services').empty();
+                        $('#ServicesRechercher').append(data);
+                    }   
+                },
+                error:function()
+                {
+                    alert("error");
+                }
             }
-        }
-    );
+        );
+    }else{
+        alert("Veuillez indiquez ce que vous rechercher");
+    }
 }
 /* 
 function Rechercher(){

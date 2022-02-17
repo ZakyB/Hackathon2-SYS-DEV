@@ -53,9 +53,12 @@
 
                 <center>
                 <form class="form-inline">
+                    <select name="" id="lstCategories"></select>
                     <input style="padding: 4.5px" type="search" placeholder="Rechercher" aria-label="Search">
                     <button class="btn btn-outline-success" type="submit">Search</button>
                 </form>
+                <br>
+                <a href="#" name="maRecherche" style="margin-left:60%;">Sauvegarder la recherche</a>
                 </center>
                 
                 </div>

@@ -42,7 +42,7 @@
 }
 
 .navbar{
-    background-color: antiquewhite;
+    background-color: #2d75c2;
     height: 90px;
     margin-bottom: 50px ;
 }
@@ -51,7 +51,13 @@
     margin: 15px; 
 }
 
-.nav-link a{
+a.nav-link{
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+a.nav-link:hover{
     color: white;
 }
 

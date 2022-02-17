@@ -9,14 +9,7 @@
     <script src="../JS/mesFonctions.js"></script>
     <script src="../JS/JQuery_3.5.1.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <script>
-        $
-        (
-            function(){
-                getLesServices();
-            }
-        );
-    </script>
+
 </head>
     <body>
         <!-- Navigation -->
@@ -54,8 +47,8 @@
                 <center>
                 <form class="form-inline">
                     <select name="" id="lstCategories"></select>
-                    <input style="padding: 4.5px" type="search" placeholder="Rechercher" aria-label="Search">
-                    <button class="btn btn-outline-success" type="submit">Search</button>
+                    <input style="padding: 4.5px" type="search" id="search" placeholder="Rechercher" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit" onclick="Rechercher()">Rechercher</button>
                 </form>
                 <br>
                 <a href="#" name="maRecherche" style="margin-left:60%;">Sauvegarder la recherche</a>
@@ -69,6 +62,15 @@
             <div class="row">
                 <div class="col-md">
                     <div class="carre" id="Services">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md">
+                    <div class="carre" id="ServicesRechercher">
 
                     </div>
                 </div>

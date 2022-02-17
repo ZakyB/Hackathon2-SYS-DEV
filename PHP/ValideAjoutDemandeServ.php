@@ -13,13 +13,15 @@ if (isset($_POST['saveDemande'])){
         $idUtilisateur = $user[0];
         $TitreService = htmlspecialchars($_REQUEST['TitreService']);
         $description = htmlspecialchars($_REQUEST['description']);
+        $prix = $_REQUEST['prix'];
         $type = 1;
+        $categorie = 1;
 
-        $sql2 = "insert into service (idUtilisateur,TitreService,description,type) 
-        Values ('$idUtilisateur','$TitreService','$description','$type')";
+        $sql2 = "insert into service (idUtilisateur,TitreService,description,type,Prix) 
+        Values ('$idUtilisateur','$TitreService','$description','$type','$prix')";
         $res = $cnx->prepare($sql2);
         $res->execute();
-        header('Location:../Pages/index.php');
+        header('Location:../Pages/DemandesService.php');
 
     }else{
         echo "Veuillez compléter tous les champs...";

@@ -15,7 +15,7 @@
     <header>
         <nav class="navbar navbar-expand-lg navbar-light fixed-top">
             <div class="container">
-                <a class="navbar-brand" href="#"><img src="https://img.icons8.com/doodle/48/000000/garage-closed.png"/></a>
+                <a class="navbar-brand" href="./Services.php"><img src="https://img.icons8.com/doodle/48/000000/garage-closed.png"/></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
                 </button>
@@ -25,7 +25,7 @@
                         <a class="nav-link" href="./Services.php">Liste des Services</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Mes Recherches</a>
+                        <a class="nav-link" href="#">Mes Options</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" style="border-radius:50px" href="./Profil.php"><button>Mon Profil</button></a>
@@ -50,7 +50,12 @@
                     <label for="">Titre de la demande de service</label>
                     <input type="text" class="form-control" id="TitreService" name="TitreService">
                     <br>
-                    <label for=""></label>
+                    <div class="row">
+                        <label for="prix">Budget de la demande de service:</label>
+                        <input type="number" id="prix" name="prix">
+                    </div>
+                    <br>
+                    <label for="">description demande de service :</label>
                     <textarea id="description" name="description"rows="4" cols="20">
                     </textarea>
                     <br>
@@ -61,6 +66,7 @@
             </div>
                 
             </form>
+            <br>
             <a href="./DemandesService.php"><button type="submit">Retour</button></a>
             </center>
 
