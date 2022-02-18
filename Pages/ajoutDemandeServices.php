@@ -6,8 +6,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link href="../CSS/styles.css" rel="stylesheet"></script>
+    <script src="../JS/mesFonctions.js"></script>
+    <script src="../JS/JQuery_3.5.1.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <a href="https://icons8.com/icon/77vA1n1-oWl1/garage-fermé"></a>
+    <script>
+        $
+        (
+            function(){
+                getLesCategories();
+                getLesVilles();
+            }
+        );
+    </script>
 </head>
 <body>
         <!-- Navigation -->
@@ -44,7 +55,7 @@
             <center>  
             <form method="POST" action="../PHP/valideAjoutDemandeServ.php">
             <h2 class="cadre"><center><strong> Demande de services</strong></center></h2>  
-            
+            <br>
             <div class="form-row ">
                 <div class="form-group col-md-4">
                     <label for="">Titre de la demande de service</label>
@@ -53,10 +64,20 @@
                     <div class="row">
                         <label for="prix">Budget de la demande de service:</label>
                         <input type="number" id="prix" name="prix">
-                        
-                        <label for="categorie">Categorie:</label>
-                        <input type="text" id="categorie" name="categorie">
-
+                    </div>
+                    <br>
+                    <div class="row">
+                        <label for="">Catégories du service</label>
+                        <select name="categorie" id="lstCategories">
+                            <option value="0">Catégories</option>
+                        </select>
+                    </div>
+                    <br>
+                    <div class="row">
+                        <label for="">Ville du service</label>
+                        <select name="ville" id="lstVilles">
+                            <option value="0">Villes</option>
+                        </select>
                     </div>
                     <br>
                     <label for="">description demande de service :</label>

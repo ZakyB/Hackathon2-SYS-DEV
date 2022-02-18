@@ -15,10 +15,11 @@ if (isset($_POST['saveDemande'])){
         $description = addslashes($_REQUEST['description']);
         $prix = $_REQUEST['prix'];
         $type = 1;
-        $categorie = 1;
+        $categorie = $_REQUEST['categorie'];
+        $ville = $_REQUEST['ville'];
 
-        $sql2 = "insert into service (idUtilisateur,TitreService,description,type,Prix,categorie) 
-        Values ('$idUtilisateur','$TitreService','$description','$type','$prix','$categorie')";
+        $sql2 = "insert into service (idUtilisateur,TitreService,description,type,Prix,categorie,ville) 
+        Values ('$idUtilisateur','$TitreService','$description','$type','$prix','$categorie','$ville')";
         $res = $cnx->prepare($sql2);
         $res->execute();
         header('Location:../Pages/DemandesService.php');

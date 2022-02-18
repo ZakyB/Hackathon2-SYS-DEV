@@ -56,10 +56,10 @@
                 <center>
                 <div class="form-inline">
                     <select name="" id="lstCategories" style="padding: 7px">
-                        <option value="0">N'importe</option>
+                        <option value="0">Catégories</option>
                     </select>
                     <select name="" id="lstVilles" style="padding: 7px">
-                        <option value="0">N'importe</option>
+                        <option value="0">Villes</option>
                     </select>
                     <input style="padding: 4.5px" type="search" id="search" placeholder="Rechercher" aria-label="Search">
                     <button class="btn btn-outline-success" onclick="Rechercher()">Rechercher</button>

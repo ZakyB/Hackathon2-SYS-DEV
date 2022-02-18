@@ -67,15 +67,15 @@
                     <div class="row">
                         <label for="">Catégories du service</label>
                         <select name="categorie" id="lstCategories">
-                            <option value="0">N'importe</option>
+                            <option value="0">Catégories</option>
                         </select>
                     </div>
                     <br>
                     <div class="row">
                         <label for="">Ville du service</label>
                         <select name="ville" id="lstVilles">
-                        <option value="0">N'importe</option>
-                    </select>
+                            <option value="0">Villes</option>
+                        </select>
                     </div>
                     <br>
                     <div class="row">

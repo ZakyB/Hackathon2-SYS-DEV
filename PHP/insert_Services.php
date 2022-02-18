@@ -3,7 +3,7 @@ session_start();
 include ("./cnx.php");
 
 if (isset($_POST['valider'])){
-    if(!empty($_REQUEST['titre']) and !empty($_REQUEST['description'])){
+    if(!empty($_REQUEST['titre']) and !empty($_REQUEST['description']) and !empty($_REQUEST['prix'])){
         $login = $_SESSION['login'];
 
         $sql = $cnx->prepare('SELECT id,adresse from utilisateur where login=?');
@@ -13,7 +13,7 @@ if (isset($_POST['valider'])){
         $idUtilisateur = $user[0];
         $adresse = $user[1];
         $titre = htmlspecialchars($_REQUEST['titre']);
-        $description = htmlspecialchars($_REQUEST['description']);
+        $description = addslashes($_REQUEST['description']);
         $categorie = $_REQUEST['categorie'];
         $ville = $_REQUEST['ville'];
         $prix = $_REQUEST['prix'];
