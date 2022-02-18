@@ -16,6 +16,7 @@
         (
             function(){
                 getLesCategories();
+                getLesVilles();
             }
         );
     </script>
@@ -68,6 +69,13 @@
                         <select name="categorie" id="lstCategories">
                             <option value="0">N'importe</option>
                         </select>
+                    </div>
+                    <br>
+                    <div class="row">
+                        <label for="">Ville du service</label>
+                        <select name="ville" id="lstVilles">
+                        <option value="0">N'importe</option>
+                    </select>
                     </div>
                     <br>
                     <div class="row">

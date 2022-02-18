@@ -15,9 +15,10 @@ if (isset($_POST['valider'])){
         $titre = htmlspecialchars($_REQUEST['titre']);
         $description = htmlspecialchars($_REQUEST['description']);
         $categorie = $_REQUEST['categorie'];
+        $ville = $_REQUEST['ville'];
         $prix = $_REQUEST['prix'];
 
-        $sql2 = "insert into service (idUtilisateur,Description,adresse,prix,categorie,TitreService) Values ('$idUtilisateur','$description','$adresse','$prix','$categorie','$titre')";
+        $sql2 = "insert into service (idUtilisateur,Description,adresse,prix,categorie,ville,TitreService) Values ('$idUtilisateur','$description','$adresse','$prix','$categorie','$ville','$titre')";
         $res = $cnx->prepare($sql2);
         $res->execute();
         header('Location:../Pages/Services.php');
