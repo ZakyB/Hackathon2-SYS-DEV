@@ -34,7 +34,7 @@
                         <a class="nav-link" href="./DemandesService.php">Liste demande de Services</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Mes Recherches</a>
+                        <a class="nav-link" href="./mesRecherches.php">Mes Recherches</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" style="border-radius:50px" href="./Profil.php"><button>Mon Profil</button></a>

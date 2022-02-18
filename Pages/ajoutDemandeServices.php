@@ -25,7 +25,7 @@
                         <a class="nav-link" href="./Services.php">Liste des Services</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Mes Options</a>
+                        <a class="nav-link" href="./mesRecherches.php">Mes Recherches</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" style="border-radius:50px" href="./Profil.php"><button>Mon Profil</button></a>

@@ -46,8 +46,8 @@
 
                 <center>
                 <div class="form-inline">
-                <select name="" id="lstCategories">
-                    <option value="0">N'importe</option>
+                    <select name="" id="lstCategories">
+                        <option value="0">N'importe</option>
                     </select>
                     <input style="padding: 4.5px" type="search" id="search" placeholder="Rechercher" aria-label="Search">
                     <button class="btn btn-outline-success" onclick="Rechercher()">Rechercher</button>

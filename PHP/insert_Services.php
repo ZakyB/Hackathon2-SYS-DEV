@@ -14,7 +14,7 @@ if (isset($_POST['valider'])){
         $adresse = $user[1];
         $titre = htmlspecialchars($_REQUEST['titre']);
         $description = htmlspecialchars($_REQUEST['description']);
-        $categorie = 1;
+        $categorie = $_REQUEST['categorie'];
         $prix = $_REQUEST['prix'];
 
         $sql2 = "insert into service (idUtilisateur,Description,adresse,prix,categorie,TitreService) Values ('$idUtilisateur','$description','$adresse','$prix','$categorie','$titre')";

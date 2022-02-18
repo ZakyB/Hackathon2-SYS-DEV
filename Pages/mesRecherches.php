@@ -14,12 +14,12 @@
         $
         (
             function(){
-                getLesDemandeServices();
+                getLesRecherches();
             }
         );
     </script>
 </head>
-    <body>
+    <body style="background-color:#D3D3D3;">
          <!-- Navigation -->
          <header>
         <nav class="navbar navbar-expand-lg navbar-light fixed-top">
@@ -34,7 +34,7 @@
                         <a class="nav-link" href="./Services.php">Liste des Services</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="./mesRecherches.php">Mes Recherches</a>
+                        <a class="nav-link" href="#">Mes Recherches</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" style="border-radius:50px" href="./Profil.php"><button>Mon Profil</button></a>
@@ -44,38 +44,14 @@
             </div>
         </nav>
         </header>
-        <br><br>
-        <a class="nav-link" style="border-radius:50px;margin-top:4%;margin-left:80%;" href="./ajoutDemandeServices.php"><button>+ Ajout demande de Service</button></a>
-
+        <br><br><br><br>    
+        
         <div class="container">
             <div class="row">
-                <div class="search" style="width:600px;margin-top:2%;padding: 30px 40px;">
-
-                <center>
-                <div class="form-inline">
-                    <select name="" id="lstCategories"></select>
-                    <input style="padding: 4.5px" type="search" id="search" placeholder="Rechercher" aria-label="Search">
-                    <button class="btn btn-outline-success" onclick="Rechercher()">Rechercher</button>
-                </div>
-                <br>
-                <a href="#" name="maRecherche" style="margin-left:60%;">Sauvegarder la recherche</a>
-                </center>
-                
-                </div>
-            </div>
-        </div>
-
-        <div class="container">
-            <div class="row">
-                <div class="col-md">
-                    <div class="carre" id="demandeServices">
+                <div class="col-md-8" style="background-color:white;">
+                    <div class="carre" id="mesRecherches">
 
                     </div>
                 </div>
             </div>
         </div>
-
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-    </body>
-</html>

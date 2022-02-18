@@ -30,7 +30,7 @@ function getLesDemandeServices()
             },
             error:function()
             {
-                alert("erreur sur l'appel des services");
+                alert("erreur sur l'appel des demande de services");
             }
         }
     );
@@ -47,7 +47,7 @@ function getLesCategories()
             },
             error:function()
             {
-                alert("erreur sur l'appel des services");
+                alert("erreur sur l'appel des catégories");
             }
         }
     );
@@ -56,7 +56,7 @@ function Rechercher(){
     
     var info = document.getElementById('search').value;
     var cat = document.getElementById('lstCategories').value;
-    if (info != ""){
+    if (info != "" & cat != ""){
         // alert(info);
         $.ajax
             (
@@ -83,34 +83,21 @@ function Rechercher(){
         alert("Veuillez indiquez ce que vous rechercher");
     }
 }
-/* 
-function Rechercher(){
-    $(document).ready(function(){
-        $('#search').keyup(function(){
-            $('#Services').html('');
-        
-            var utilisateur = $(this).val();
-        
-            if(utilisateur != ""){
-            $.ajax
-            (
-                {
-                    method:"GET",
-                    url:"../PHP/rechercher.php",
-                    data: 'user=' + encodeURIComponent(utilisateur),
-                    success: function(data)
-                    {
-                        if(data != ""){
-                            $('#Services').append(data);
-                        }   
-                    },
-                    error:function()
-                    {
-                        alert("error");
-                    }
-                }
-            );
+
+function getLesRecherches()
+{
+    $.ajax(
+        {
+            //appel a un script php
+            url:"../PHP/getLesRecherches.php",
+            success: function(data)
+            {
+                $('#mesRecherches').append(data);
+            },
+            error:function()
+            {
+                alert("erreur sur l'appel des recherches");
+            }
         }
-    });
-  });
-} */
+    );
+}

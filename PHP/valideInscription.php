@@ -23,7 +23,7 @@ if (isset($_POST['enregistrer'])){
             Values ('$nom','$prenom','$adresse','$email','$tel','$login','$mdp')";
             $res = $cnx->prepare($sql2);
             $res->execute();
-            header('Location:../index.php');
+            header('Location:../Pages/index.php');
         } 
 
     }else{

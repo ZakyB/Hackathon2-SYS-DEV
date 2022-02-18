@@ -7,8 +7,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link href="../CSS/styles.css" rel="stylesheet"></script>
+    <script src="../JS/mesFonctions.js"></script>
+    <script src="../JS/JQuery_3.5.1.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <a href="https://icons8.com/icon/77vA1n1-oWl1/garage-fermé"></a>
+    <script>
+        $
+        (
+            function(){
+                getLesCategories();
+            }
+        );
+    </script>
 </head>
 <body>
     <!-- Navigation -->
@@ -25,7 +35,7 @@
                     <a class="nav-link" href="./DemandesService.php">Demande de Services</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Mes Recherches</a>
+                    <a class="nav-link" href="./mesRecherches.php">Mes Recherches</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" style="border-radius:50px" href="#"><button>Mon Profil</button></a>
@@ -55,7 +65,9 @@
                     <br>
                     <div class="row">
                         <label for="">Catégories du service</label>
-                        <select name="" id="lstCategories"></select>
+                        <select name="categorie" id="lstCategories">
+                            <option value="0">N'importe</option>
+                        </select>
                     </div>
                     <br>
                     <div class="row">
