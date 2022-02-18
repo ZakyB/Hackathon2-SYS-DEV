@@ -53,6 +53,10 @@
                     <div class="row">
                         <label for="prix">Budget de la demande de service:</label>
                         <input type="number" id="prix" name="prix">
+                        
+                        <label for="categorie">Categorie:</label>
+                        <input type="text" id="categorie" name="categorie">
+
                     </div>
                     <br>
                     <label for="">description demande de service :</label>
